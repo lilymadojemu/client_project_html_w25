@@ -1,27 +1,36 @@
-/* main {
+.home, .academicSuccess{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-} */
-/* Skip to main content */
-#skip{
-    position: absolute;
-    top: auto;
-    right: 0;
-    font-size: 1em;
-    text-decoration: none;
-    padding: 0.3em 0.7em;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
+
+/* Skip to main content */
+#skip{
+    opacity: 0;
+
+}
+#skip:focus{
+    opacity: 100;
+}
+/* header */
+header {
+    text-align: center;
+}
+
+header img:nth-child(1){
+    width:50%;
+    height: 30%
+    
+
+}
 /* nav */
 nav {
     margin: 3em 0 1em;
     position: relative;
     grid-area: nav;
+    background: #00274C;
 }
-/* nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav ul {
     text-decoration: none;
 
     display: -webkit-box;
@@ -36,19 +45,35 @@ nav {
 }
 nav ul li a {
     margin: 1em 1.35em;
-    padding: 0.4em !important;
-    font-weight: var(--fw-medium);
+    padding: 0.4em;
     text-transform: uppercase;
-} */
-
-.tutoring ul, .tutoring ol{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    color:#FFCB05;
 }
 
+a:active{
+    color: white;
+}
+
+.introduction{
+    grid-column:1/-1;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.introduction h2 {
+    text-align: center;
+}
+
+body{
+    font-family: 'IBM Plex Sans', 'Verdana'
+}
+h1{
+    text-align: center;
+    
+}
 h2,h3, h4{
     color: #00274C;
     text-align: left;
+    font-weight: bold;
 }
 
 h2 {
@@ -61,10 +86,58 @@ h3 {
 
 }
 
+
 img {
     width: 80%;
 }
 
-img:nth-child(1){
-    width:50%;
+
+/* footer */
+footer {
+    background-color: #2F65A7;
+    color: white;
+    text-align: center;
+    height: 40%;
+    padding: 15px;
+    
+}
+
+footer a, footer h3 {
+    color: white;
+    text-align: center;
+    border: 0;
+    font-weight: lighter;
+}
+/* home page specific */
+.home p, li{
+    text-align: left;
+
+}
+
+.home h1{
+    background-image: url("http://127.0.0.1:5500/images/MCOMMONS-FinalsStudyLocations2024-01.jpg");
+}
+/* Being Successful in academia specific page */
+/* Inspired by https://stylestage.dev/styles/at-the-desk/ */
+.academia{
+    background-image: url("http://127.0.0.1:5500/images/UMSI_MHIClassroom_02202023_11.jpg");
+    background-color: black;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/-1;
+}
+
+h2:nth-child(1) {
+    grid-column: 1/-1;
+};
+
+.academicSuccess p {
+ grid-column: 1/-1;
+
 }
