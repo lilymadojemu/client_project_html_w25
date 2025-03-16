@@ -4,7 +4,6 @@
     height:fit-content;
     padding: 0 1.5rem;
 }
-
 /* Skip to main content */
 #skip{
     opacity: 0;
@@ -20,18 +19,15 @@ header {
 header img:nth-child(1){
     width:50%;
     height: 30%
-    
-
 }
+
 /* nav */
 nav {
-    margin: 3em 0 1em;
-    position: relative;
     background: #00274C;
+    padding: 10px;
 }
+/* nav css from https://stylestage.dev/styles/at-the-desk/ */
 nav ul {
-    text-decoration: none;
-
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -42,15 +38,28 @@ nav ul {
         -ms-flex-pack: center;
             justify-content: center;
 }
-nav ul li a {
+
+nav a {
     margin: 1em 1.35em;
     padding: 0.4em;
     text-transform: uppercase;
+    text-decoration: none;
     color:#FFCB05;
 }
+nav a:link{
+    color:#FFCB05;
+}
+nav a:visited {
+    color: white;
+}
 
+nav a:hover{
+    color: white;
+    text-decoration: underline;
+}
 nav a:active{
     color: white;
+    text-decoration: underline;
 }
 
 .introduction{
