@@ -163,6 +163,9 @@ header h1{
     display: inline;
     margin:2%;
 }
+#life-outside-classroom > ul li {
+    display: block;
+}
 
 section:nth-child(n+2){
     grid-column: 1/-1;
