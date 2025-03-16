@@ -62,12 +62,13 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     height:fit-content;
     padding: 0 1.5rem;
+    text-align: left;
 }
 
 /* Introductory Content area on each page */
 .introduction{
     grid-column:1/-1;
-    text-align: center;
+    text-align: left;
     margin-bottom: 5%;
 }
 .introduction h2 {
@@ -141,9 +142,9 @@ footer a:hover {
 .home p {
     text-align: left;
 }
+
 header h1{
-    background-image: url("https://lilymadojemu.github.io/client_project_html_w25/images/MCOMMONS-FinalsStudyLocations2024-01.jpg");
-    background-color: black;
+    background: url("https://lilymadojemu.github.io/client_project_html_w25/images/MCOMMONS-FinalsStudyLocations2024-01.jpg");
     text-align: center;
     color: white;
     background-size: cover;
@@ -153,6 +154,7 @@ header h1{
     justify-content: center;
     align-items: center;
     grid-column: 1/-1;
+    font-weight: bolder;
 }
 
 .home li{
@@ -165,33 +167,24 @@ section:nth-child(n+2){
     margin-top: 5%;
 }
 
-section:nth-child(n+2) > article {
-    grid-column: 2;
-    text-align: center;
-}
 
 figure {
     margin: 5%;
     width: 80%;
 }
 
-#life-outside-classroom li{
-    display: block;
-}
 
 /* Being Successful in academia specific page */
 /* Inspired by https://stylestage.dev/styles/at-the-desk/ */
+.academia{
+    background-color: black;
+    
+}
+
 .academia h1{
-    background-image: url("http://127.0.0.1:5500/images/UMSI_MHIClassroom_02202023_11.jpg");
+    background-image: url("https://lilymadojemu.github.io/client_project_html_w25/images/UMSI_MHIClassroom_02202023_11.jpg");
 }
 
-h2:nth-child(1) {
-    grid-column: 1/-1;
-};
-
-.academicSuccess p {
- grid-column: 1/-1;
-}
 .academicSuccess ol,.academicSuccess ul {
     display: grid;
 }
@@ -199,3 +192,18 @@ h2:nth-child(1) {
 .academicSuccess ol li:nth-child(4), .academicSuccess ul li:nth-child(4){
     grid-column: 2;
 }
+
+/* Life outside the classroom specific page */
+/* Will need to update text color for accessibility */
+.outsideClass h1 {
+    background-image: url('https://lilymadojemu.github.io/client_project_html_w25/images/MCOMMONS-WinterSemester2025-01.jpg');
+}
+.life-outside-classroom ul {
+    display: grid;
+}
+.life-outside-classroom  ul li:nth-child(4){
+    grid-column: 2;
+}
+/* Supporting You specific page */
+
+
