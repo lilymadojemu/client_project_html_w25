@@ -1,9 +1,4 @@
-#main{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    height:fit-content;
-    padding: 0 1.5rem;
-}
+
 /* Skip to main content */
 #skip{
     opacity: 0;
@@ -61,7 +56,15 @@ nav a:active{
     color: white;
     text-decoration: underline;
 }
+/* Main content of all pages */
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:fit-content;
+    padding: 0 1.5rem;
+}
 
+/* Introductory Content area on each page */
 .introduction{
     grid-column:1/-1;
     text-align: center;
@@ -70,7 +73,6 @@ nav a:active{
 .introduction h2 {
     text-align: center;
 }
-
 body{
     font-family: "Lora", Georgia, "Times New Roman", Times, serif;
     font-size: 1rem;
