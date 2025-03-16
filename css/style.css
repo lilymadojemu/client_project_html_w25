@@ -1,6 +1,7 @@
 .home, .academicSuccess{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    height:fit-content;
 }
 
 
@@ -113,14 +114,8 @@ footer a, footer h3 {
     text-align: left;
 
 }
-
-.home h1{
-    background-image: url("http://127.0.0.1:5500/images/MCOMMONS-FinalsStudyLocations2024-01.jpg");
-}
-/* Being Successful in academia specific page */
-/* Inspired by https://stylestage.dev/styles/at-the-desk/ */
-.academia{
-    background-image: url("http://127.0.0.1:5500/images/UMSI_MHIClassroom_02202023_11.jpg");
+header h1{
+    background-image: url("images/MCOMMONS-FinalsStudyLocations2024-01.jpg");
     background-color: black;
     text-align: center;
     color: white;
@@ -131,6 +126,22 @@ footer a, footer h3 {
     justify-content: center;
     align-items: center;
     grid-column: 1/-1;
+}
+
+.home li{
+    display: inline;
+    margin:2%;
+}
+
+.home section:nth-child(n+2){
+    grid-column: 2;
+}
+
+
+/* Being Successful in academia specific page */
+/* Inspired by https://stylestage.dev/styles/at-the-desk/ */
+.academia h1{
+    background-image: url("http://127.0.0.1:5500/images/UMSI_MHIClassroom_02202023_11.jpg");
 }
 
 h2:nth-child(1) {
