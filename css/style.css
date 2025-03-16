@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height:fit-content;
-
+    padding: 0 1.5rem;
 }
 
 /* Skip to main content */
@@ -49,7 +49,7 @@ nav ul li a {
     color:#FFCB05;
 }
 
-a:active{
+nav a:active{
     color: white;
 }
 
@@ -92,23 +92,42 @@ img {
 
 
 /* footer */
+/* Inspired by https://stylestage.dev/styles/at-the-desk/ */
 footer {
     background-color: #2F65A7;
     color: white;
-    text-align: center;
-    height: 40%;
-    padding: 15px;
-    margin-top: 5%;
-    
+    text-align: left;
+    margin-top: 2%;
+    padding: 2em 0;
+    font-weight: 400;
+}
+
+.container {
+    padding: 0 1.5rem;
 }
 
 footer a, footer h3 {
     color: white;
-    text-align: center;
     border: 0;
-    font-weight: lighter;
+    font-weight: 400;
 }
-/* home page specific */
+
+footer a {
+    background-color: white;
+    color:#2F65A7;
+    padding: 1%;
+    text-decoration: none;
+}
+
+footer a:hover {
+    /* background-color: #2F65A7; */
+    color:#2F65A7;
+    padding: 1%;
+    text-decoration: underline;
+}
+
+
+/* Home Page Specific */
 .home p {
     text-align: left;
 }
