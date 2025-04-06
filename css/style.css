@@ -307,7 +307,6 @@ a button:hover{
     padding: 1.5rem;
     background-color: #f9f9f9;
     border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 #feedbackForm h2 {
@@ -318,8 +317,7 @@ a button:hover{
 form fieldset {
     border: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 1rem;
 }
 
@@ -348,21 +346,8 @@ form textarea {
     min-height: 120px;
 }
 
-form input[type="submit"] {
-    align-self: flex-start;
-    background-color: #00274C; /* U-M blue */
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
 
-form input[type="submit"]:hover {
-    background-color: #1a3d6d;
-}
+
 /* Desktop View */
 @media screen and (min-width: 1000px) {
 
