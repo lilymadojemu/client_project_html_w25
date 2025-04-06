@@ -13,7 +13,7 @@
         <a id="skip" href = "#main">Skip to Main Content</a>
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href = "index.html" class="current">Home</a></li>
                 <li><a href = "academia.html">Being Successful in Academia</a></li>
                 <li><a href = "outside_classroom.html">Life Outside of the Classroom</a></li>
                 <li><a href = "helpful_resources.html">Supporting You</a></li>
@@ -26,14 +26,12 @@
         <section class="introduction" tabindex="0">
             <h2>Welcome to the UM Graduate Student Success Resource Portal</h2>
             <p>This guide is set up to help you be successful inside and outside of the classroom and we have included the following resources throughout our site:</p>
-            <br>
             <ul>
                 <li>Academic Resources</li>
                 <li>Life Outside Classroom</li>
                 <li>Basic Needs Support</li>
             </ul>
         </section>
-
         <section tabindex="0">
             <h2>Academic Resources</h2>
             <!-- Content taken & modified from ChatGPT with the prompt, "Refine into a paragraphL <p> Being part of UMSI means access to a world-class education and there are numerous tools at the university ensuring that you are able to reach that potential.</p>" ChatGPT. (2025). ChatGPT (January 2025 version) [Large language model]. -->
@@ -45,7 +43,6 @@
                     <figcaption>Hatcher Graduate Library</figcaption>
                 </figure>
                 <p>There are plenty of great places to study on and around campus whether your alone or with your peers. Some popular locations include:</p>
-                <br>
                 <ul>
                     <li> Hatcher Graduate Library</li>
                     <li> Michigan Union</li>
@@ -56,9 +53,7 @@
 
         <section tabindex="0">
             <h2>Basic Needs Support</h2>
-
-            <p>There are many resources throughout the University of Michigan to support students' access to source like health and food as keeping your body healthy is essential for success. </p>
-
+            <p>There are many resources throughout the University of Michigan to support students' access to source like health and food as keeping your body healthy is essential for success.</p>
             <article>
                 <h3>University Health Service (UHS)</h3>
                 <figure>
@@ -67,7 +62,6 @@
                 </figure>
                 <p>University Health Service (UHS): Access comprehensive medical care, including routine check-ups, vaccinations, and specialist referrals.</p>
             </article>
-
             <article>
                 <h3>Counseling and Psychological Services (CAPS):</h3>
                 <p>Maintaining your mental well-being is crucial for thriving in graduate school. CAPS provides resources to support your mental health including access individual counseling, group therapy, workshops, and crisis intervention services.</p>
@@ -80,13 +74,26 @@
             <ul>
                 <li><strong>Student Organizations:</strong> Join one of the many student organizations to connect with peers who share your interests and passions.</li>
                 <li><strong>Career Services:</strong> Utilize career counseling, job search resources, and networking opportunities to prepare for your professional future.</li>
-                
                 <li><strong>Community Engagement:</strong> Get involved with local volunteering opportunities and community service projects to make a positive impact.</li>
             </ul>
         </section>
         <!-- Content taken & modified from UMGPT with the prompt, "write me a webpage of intro content to help University of Michigan Master's students navigate different resources for being successful in grad school - this will include academic resources, physical health resources, mental health resources, support for life outside the classroom"
         UMGPT. (2024). UMGPT (August 29th version) [Large language model]. -->
 
+         <!-- A form for users to fill out to let us know what information would they find valuable to add to the website -->
+        <section id="feedbackForm" tabindex="0">
+            <h2>Help Us Support You!</h2>
+            <form action="https://formspree.io/f/mkgjglwv" method="POST">
+                <fieldset>
+                    <legend> Please fill out this form to let us know what information to add to this website</legend>
+                    <label for="name_id"> Your Name</label><input type="text" placeholder="Enter Your Name" id="name_id" name="name" >
+                    <label for="email"> Your Email</label><input type="email" id="email" name="email">
+                    <label for="msg_id">Feedback</label>
+                    <textarea id="msg_id" name="text_msg"></textarea>
+                    <input id="submit" type="submit">
+              </fieldset>
+            </form>
+        </section>
     </main>
     <footer>
         <div class="container">
@@ -100,6 +107,10 @@
             <br>
             <img src="images/u-m_logo-horizontal-white.png" alt="Horizontal Logo in white - University of Michigan">
         </div>
+        <!-- Your footer must dynamically update to show the current year using Javascript -->
+        <p>Copyright <span id="year"></span></p>
+
     </footer>
 </body>
+<script src="js/script.js" defer></script>
 </html>

@@ -20,6 +20,7 @@ header img:nth-child(1){
 nav {
     background: #00274C;
     padding: 10px;
+    top:0;
 }
 /* nav css from https://stylestage.dev/styles/at-the-desk/ */
 nav ul {
@@ -34,6 +35,10 @@ nav ul {
             justify-content: center;
 }
 
+nav li {
+    list-style-type: none;
+}
+
 nav a {
     margin: 1em 1.35em;
     padding: 0.4em;
@@ -44,9 +49,6 @@ nav a {
 nav a:link{
     color:#FFCB05;
 }
-nav a:visited {
-    color: white;
-}
 
 nav a:hover{
     color: white;
@@ -55,6 +57,11 @@ nav a:hover{
 nav a:active{
     color: white;
     text-decoration: underline;
+}
+nav a.current {
+    border-bottom: 2px solid #FFCB05;
+    font-weight: bold;
+    color: white;
 }
 /* Main content of all pages */
 main {
@@ -199,7 +206,6 @@ figure {
 }
 
 /* Life outside the classroom specific page */
-/* Will need to update text color for accessibility */
 .outsideClass h1 {
     background-image: url('https://lilymadojemu.github.io/client_project_html_w25/images/MCOMMONS-WinterSemester2025-01.jpg');
 }
@@ -213,5 +219,227 @@ figure {
 .resources h1{
     background-image: url("https://lilymadojemu.github.io/client_project_html_w25/images/UMSI_SpringCampus_04122022_007.jpg");
 }
+/* 404 Page  */
 
+.errorPage {
+    grid-column: 2;
+}
+/* Adapted from ebay's 404 page css: https://www.ebay.com/n/error*/
+button {
+    grid-column: 2;
+    background-color:#00274C;
+    color: #FFCB05;
+    border: 1px solid;
+    border-radius: var(--radius-button, 32px);
+    box-sizing: border-box;
+    padding: 11px 17px 10px;
+    line-height: 1.25;
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 24px;
+    min-height: 40px;
+    min-width: 88px;
+}
+.errorPage p {
+    color: #191919;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+    word-wrap: break-word;
+    padding-top: 12px;
+    margin: 0;
+}
+.errorTitle h1 {
+    background-image: none;
 
+}
+a button:hover{
+    background-color:#FFCB05 ;
+    color: #00274C;
+    text-decoration: underline;
+
+}
+
+/* Feedback Form */
+
+#submit {
+    background-color:#00274C;
+    color: #FFCB05;
+    border: 1px solid;
+    border-radius: var(--radius-button, 32px);
+    box-sizing: border-box;
+    padding: 11px 17px 10px;
+    line-height: 1.25;
+    font-size: .875rem;
+    font-style: normal;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 24px;
+    min-height: 40px;
+    min-width: 88px;
+}
+
+#submit:hover {
+    background-color:#FFCB05 ;
+    color: #00274C;
+    text-decoration: underline;
+}
+
+/* Styling from Chatgpt, full entry:  */
+/*  Content taken & modified from ChatGPT with the prompt, "<section id="feedbackForm" tabindex="0">
+            <h2>Help Us Support You!</h2>
+            <form action="https://formspree.io/f/mkgjglwv" method="POST">
+                <fieldset>
+                    <legend> fill out to let us know what information would they find valuable to add to the website</legend>
+                    <label for="name_id"> Your Name</label><input type="text" placeholder="Enter Your Name" id="name_id" name="name" >
+                    <label for="email"> Your Email</label><input type="email" id="email" name="email">
+                    <label for="msg_id">Feedback</label>
+                    <textarea id="msg_id" name="text_msg"></textarea>
+                    <input id="submit" type="submit">
+              </fieldset>
+            </form>
+        </section>" ChatGPT. (2025). ChatGPT (January 2025 version) [Large language model].  */
+#feedbackForm {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#feedbackForm h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+form fieldset {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+form label {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+form input[type="submit"] {
+    align-self: flex-start;
+    background-color: #00274C; /* U-M blue */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1a3d6d;
+}
+/* Desktop View */
+@media screen and (min-width: 1000px) {
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    main {
+        display: grid;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        align-items: start;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    article figure {
+        grid-column: 1;
+        margin-top: 5%;
+        grid-row: 4;
+    }
+
+    article > *:not(figure) {
+        grid-column: 2;
+    }
+
+    article img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    }
+
+    article p {
+        grid-column: 2;
+    }
+
+    header h1{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 50%;
+        font-size: large;
+    }
+    p {
+        font-size: medium;
+    }
+
+    footer, footer h3 {
+        text-align: center;
+    }
+    footer a {
+        grid-column: 2;
+        border: 1px solid;
+        border-radius: var(--radius-button, 32px);
+        box-sizing: border-box;
+        padding: 11px 17px 10px;
+        line-height: 1.25;
+        font-size: .875rem;
+        font-style: normal;
+        font-weight: 700;
+        text-decoration: none;
+        margin-top: 24px;
+        min-height: 40px;
+        min-width: 88px;
+        top: 5%;
+    }
+
+    img {
+        object-fit: contain;
+        width: 40%;
+    }
+    
+    h2 {
+        display: grid;
+        justify-content: center;
+    }
+
+}
